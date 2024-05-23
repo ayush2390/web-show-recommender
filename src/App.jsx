@@ -9,27 +9,45 @@ function App() {
   };
 
   return (
-    <>
-      <h1>Netflix Web Show recommender</h1>
-      <div>
-        <select onChange={handleChange}>
-          <option value="">Select your genre</option>;
+    <div className="app-container">
+      <h1 className="header">Netflix Web Show Recommender</h1>
+      <div className="genre-selector">
+        <select onChange={handleChange} className="select-genre">
+          <option value="">Select your genre</option>
           {jsonData.genre.map((genre, key) => {
-            return <option value={key}>{genre}</option>;
+            return (
+              <option key={key} value={key}>
+                {genre}
+              </option>
+            );
           })}
         </select>
       </div>
-      <div style={{ display: "flex" }} className="lists">
-        <div style={{ flex: "50%", paddingRight: "10px", textAlign: "left" }}>
-          {count &&
-            jsonData.shows[count].slice(0, 20).map((show) => <li>{show}</li>)}
-        </div>
-        <div style={{ flex: "50%", paddingLeft: "10px", textAlign: "left" }}>
-          {count &&
-            jsonData.shows[count].slice(20).map((show) => <li>{show}</li>)}
-        </div>
+      <div className="shows-container">
+        {count && (
+          <>
+            <div className="shows-list">
+              <ul>
+                {jsonData.shows[count].slice(0, 20).map((show, index) => (
+                  <li key={index} className="show-item">
+                    {show}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="shows-list">
+              <ul>
+                {jsonData.shows[count].slice(20).map((show, index) => (
+                  <li key={index} className="show-item">
+                    {show}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </>
+        )}
       </div>
-    </>
+    </div>
   );
 }
 
