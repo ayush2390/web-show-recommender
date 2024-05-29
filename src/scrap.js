@@ -1,44 +1,47 @@
-import { PlaywrightCrawler } from "crawlee";
+import { PlaywrightCrawler, log, Dataset } from "crawlee";
 
 const crawler = new PlaywrightCrawler({
-  requestHandler: async ({ page, request, enqueueLinks, pushData }) => {
-    console.log(`Processing: ${request.url}`);
+  requestHandler: async ({ request, parseWithCheerio, pushData }) => {
+    log.info(`Processing: ${request.url}`);
     console.log(request.label);
 
-    const titles = await page.$$eval(
-      "span.nm-collections-row-name",
-      (elements) => {
-        // Map the text content of each element
-        return elements.map((el) => el.textContent.trim());
-      }
-    );
-    // console.log(titles);
-    const shows = await page.$$eval(
-      "span.nm-collections-title-name",
-      (elements) => {
-        // Map the text content of each element
-        return elements.map((el) => el.textContent.trim());
-      }
-    );
+    // Use parseWithCheerio for efficient HTML parsing
+    const $ = await parseWithCheerio();
 
-    let allShows = [];
-    let totalShows = [];
-    shows.map((show) => {
-      if (allShows.length == 40) {
-        totalShows.push(allShows);
-        allShows = [];
+    // Extract genre titles
+    const titles = $(".nm-collections-row-name")
+      .map((_, el) => $(el).text().trim())
+      .get();
+
+    // Extract show titles
+    const shows = $(".nm-collections-title-name")
+      .map((_, el) => $(el).text().trim())
+      .get();
+
+    // Prepare data for pushing
+    const allShows = [];
+    let chunk = [];
+    shows.forEach((show) => {
+      chunk.push(show);
+      if (chunk.length === 40) {
+        allShows.push(chunk);
+        chunk = [];
       }
-      allShows.push(show);
     });
+    if (chunk.length > 0) {
+      allShows.push(chunk);
+    }
 
-    await pushData({
+    // await Dataset.pushData({ titles, allShows });
+    await Dataset.pushData({
       genre: titles,
-      shows: totalShows,
+      shows: allShows,
     });
   },
 
-  // Let's limit our crawls to make our tests shorter and safer.
+  // Limit crawls for efficiency
   maxRequestsPerCrawl: 20,
 });
 
 await crawler.run(["https://www.netflix.com/in/browse/genre/1191605"]);
+await Dataset.exportToJSON("results");

@@ -1,35 +1,59 @@
 import { useState } from "react";
 import "./App.css";
-import jsonData from "../storage/datasets/default/000000001.json";
+import jsonData from "../storage/key_value_stores/default/results.json";
 
 function App() {
-  const [count, setCount] = useState();
+  const [count, setCount] = useState(null);
+
   const handleChange = (event) => {
-    setCount(event.target.value);
+    const value = event.target.value;
+    setCount(value === "" ? null : parseInt(value));
   };
 
+  // Validate count to ensure it is within the bounds of the jsonData.shows array
+  const isValidCount =
+    count !== null && count >= 0 && count < jsonData[0].shows.length;
+
   return (
-    <>
-      <h1>Netflix Web Show recommender</h1>
-      <div>
-        <select onChange={handleChange}>
-          <option value="">Select your genre</option>;
-          {jsonData.genre.map((genre, key) => {
-            return <option value={key}>{genre}</option>;
+    <div className="app-container">
+      <h1 className="header">Netflix Web Show Recommender</h1>
+      <div className="genre-selector">
+        <select onChange={handleChange} className="select-genre">
+          <option value="">Select your genre</option>
+          {jsonData[0].genre.map((genre, key) => {
+            return (
+              <option key={key} value={key}>
+                {genre}
+              </option>
+            );
           })}
         </select>
       </div>
-      <div style={{ display: "flex" }} className="lists">
-        <div style={{ flex: "50%", paddingRight: "10px", textAlign: "left" }}>
-          {count &&
-            jsonData.shows[count].slice(0, 20).map((show) => <li>{show}</li>)}
-        </div>
-        <div style={{ flex: "50%", paddingLeft: "10px", textAlign: "left" }}>
-          {count &&
-            jsonData.shows[count].slice(20).map((show) => <li>{show}</li>)}
-        </div>
+      <div className="shows-container">
+        {isValidCount && (
+          <>
+            <div className="shows-list">
+              <ul>
+                {jsonData[0].shows[count].slice(0, 20).map((show, index) => (
+                  <li key={index} className="show-item">
+                    {show}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="shows-list">
+              <ul>
+                {jsonData[0].shows[count].slice(20).map((show, index) => (
+                  <li key={index} className="show-item">
+                    {show}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </>
+        )}
       </div>
-    </>
+    </div>
   );
 }
 
