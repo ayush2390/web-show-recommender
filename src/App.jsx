@@ -11,8 +11,7 @@ function App() {
   };
 
   // Validate count to ensure it is within the bounds of the jsonData.shows array
-  const isValidCount =
-    count !== null && count >= 0 && count < jsonData[0].shows.length;
+  const isValidCount = count !== null && count >= 0 && count < jsonData[0].shows.length;
 
   return (
     <div className="app-container">
