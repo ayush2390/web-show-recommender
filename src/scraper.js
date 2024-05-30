@@ -1,7 +1,7 @@
-import { PlaywrightCrawler, log, Dataset } from "crawlee";
+import { log, Dataset, CheerioCrawler } from "crawlee";
 
-const crawler = new PlaywrightCrawler({
-  requestHandler: async ({ request, parseWithCheerio, pushData }) => {
+const crawler = new CheerioCrawler({
+  requestHandler: async ({ request, parseWithCheerio }) => {
     log.info(`Processing: ${request.url}`);
     console.log(request.label);
 

@@ -1,29 +1,9 @@
 {
-  "usableSessionsCount": 2,
+  "usableSessionsCount": 1,
   "retiredSessionsCount": 0,
   "sessions": [
     {
-      "id": "session_XQaXj3cjTk",
-      "cookieJar": {
-        "version": "tough-cookie@4.1.4",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": []
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2024-05-29T09:09:29.309Z",
-      "createdAt": "2024-05-29T08:19:29.309Z",
-      "usageCount": 0,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_ZnZa9ZOPfQ",
+      "id": "session_0FK92KypIA",
       "cookieJar": {
         "version": "tough-cookie@4.1.4",
         "storeType": "MemoryCookieStore",
@@ -34,56 +14,58 @@
         "cookies": [
           {
             "key": "flwssn",
-            "value": "fef4d2e4-cb47-4f40-b1e3-1e9e9c35319f",
-            "expires": "2024-05-29T11:19:32.132Z",
+            "value": "d8d88f17-7009-43a9-a6f7-17252074e20b",
+            "maxAge": 10800,
             "domain": "netflix.com",
             "path": "/",
             "hostOnly": false,
-            "creation": "2024-05-29T08:19:35.438Z",
-            "lastAccessed": "2024-05-29T08:19:35.438Z"
+            "creation": "2024-05-30T07:45:48.071Z",
+            "lastAccessed": "2024-05-30T07:45:48.071Z"
           },
           {
             "key": "nfvdid",
-            "value": "BQFmAAEBEO5psWafayHPvRWpZoMtAzBAE0kqcOTbBBjpiYheZKy1Inh7Rm8k3VQ-sJ0sPlZk5qGAAORxFGH-TJ1M2tYDum7Gs6rCSH4QDPRBcJpcCOv_Dw%3D%3D",
-            "expires": "2025-05-29T08:19:32.132Z",
+            "value": "BQFmAAEBEKnkEz92FMk-3aZOB2dcm01AxsVzqcdQBss2ISMd8fMYyaBXNquireO5-48GhVK1JnQLXs2qUnqseRqOcFe_xVo4yLHxBLuRUgHxR8-2k34EHA%3D%3D",
+            "maxAge": 31536000,
             "domain": "netflix.com",
             "path": "/",
             "hostOnly": false,
-            "creation": "2024-05-29T08:19:35.444Z",
-            "lastAccessed": "2024-05-29T08:19:35.444Z"
+            "creation": "2024-05-30T07:45:48.080Z",
+            "lastAccessed": "2024-05-30T07:45:48.080Z"
           },
           {
             "key": "SecureNetflixId",
-            "value": "v%3D2%26mac%3DAQEAEQABABRG6D4ZE6NwchGs8y9df9gKX9rAHyP9_YU.%26dt%3D1716970770893",
-            "expires": "2025-05-29T08:19:32.132Z",
+            "value": "v%3D2%26mac%3DAQEAEQABABRVAXMdmARa532dObyHr7QKLIOjZLznsJ8.%26dt%3D1717055146533",
+            "expires": "2025-05-30T07:45:46.000Z",
             "domain": "netflix.com",
             "path": "/",
             "secure": true,
             "httpOnly": true,
             "hostOnly": false,
-            "creation": "2024-05-29T08:19:35.446Z",
-            "lastAccessed": "2024-05-29T08:19:35.446Z"
+            "creation": "2024-05-30T07:45:48.084Z",
+            "lastAccessed": "2024-05-30T07:45:48.084Z",
+            "sameSite": "strict"
           },
           {
             "key": "NetflixId",
-            "value": "v%3D2%26ct%3DBQAOAAEBEBUwaGhNAPnjyREmp3NO2yKBAAw7VWxNpx6UyTcttqYuZVoonXVkIV-hvCsPvqMGl58ohelSxFesPnLgE6XxbculXLewKC_6b8qZlKYmMBzz4romTvDZOZdRpp5_GqammI9tZe3uiGETgyT210GXVpk4qp_xWt9kwREnGu_ysnmWy1qDVLrt-Ee7L_933Yw5eAZkyuIufvrAXPPYO_EzH-k41Ehgru_0-jvV5djDLTARlJDz2gTkxJtPlRdCjKu-ZN6GJSVtQeuMgWpTpQ40d5K8SIh-KzRsbJkobPVwFsw2S98e_RVTVGLUcYCIljuypR5CQWMAsePz3HI3syF-D251xyJZ96dJ55EVxlEgVRxROrU.%26bt%3Ddev%26mac%3DAQEAEAABABQFeJxnfSkgvA-QgVpOvEeUk4IIDT5KqGQ.",
-            "expires": "2025-05-29T08:19:32.132Z",
+            "value": "v%3D2%26ct%3DBQAOAAEBEKqmWEQiQVENSadnevDvtCGBABL4HoKF_KDAYSEqVhsK6YYBlfL3Bo6Fdrdv2KvZ7Ngctkw8F0lt7Lre_5vyxw-4Xei0HRce-c5K5QTa5902a98zPKruROWTWqEbR9ArEUPygIUp3pn6nN-yqjjF33KZFZeg7n-AFvW3nr5vJ_pMG92FXPmAnIww8MnXDohmkZAm5OYnSJnTKRN51w3or6pzolI7la1FL8DIoIXkEPkqCEAd5CqSqYWPwNip4Af6CrwsUxQh_gFSQglpoHafQa7T8FxSLEAjne_XsWfHyNhL1SfbvOlRkqnUuAJEsgpCXjf74briemBChPwDZTWq4GSzAMQsPRh15R4_hBA7RY1S3Ds.%26bt%3Ddev%26mac%3DAQEAEAABABTCIHSfhTihu_WpbAYOzkI4qDCiSQYVQMs.",
+            "expires": "2025-05-30T07:45:46.000Z",
             "domain": "netflix.com",
             "path": "/",
             "secure": true,
             "httpOnly": true,
             "hostOnly": false,
-            "creation": "2024-05-29T08:19:35.447Z",
-            "lastAccessed": "2024-05-29T08:19:35.447Z"
+            "creation": "2024-05-30T07:45:48.085Z",
+            "lastAccessed": "2024-05-30T07:45:48.085Z",
+            "sameSite": "lax"
           }
         ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2024-05-29T09:09:29.318Z",
-      "createdAt": "2024-05-29T08:19:29.318Z",
-      "usageCount": 2,
+      "expiresAt": "2024-05-30T08:35:43.647Z",
+      "createdAt": "2024-05-30T07:45:43.647Z",
+      "usageCount": 1,
       "maxUsageCount": 50,
       "errorScore": 0
     }

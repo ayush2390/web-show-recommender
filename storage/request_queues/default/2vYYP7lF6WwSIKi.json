@@ -1,6 +1,6 @@
 {
 	"id": "2vYYP7lF6WwSIKi",
-	"json": "{\"id\":\"2vYYP7lF6WwSIKi\",\"url\":\"https://www.netflix.com/in/browse/genre/1191605\",\"loadedUrl\":\"https://www.netflix.com/in/browse/genre/1191605\",\"uniqueKey\":\"https://www.netflix.com/in/browse/genre/1191605\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2024-05-29T08:19:35.705Z\"}",
+	"json": "{\"id\":\"2vYYP7lF6WwSIKi\",\"url\":\"https://www.netflix.com/in/browse/genre/1191605\",\"loadedUrl\":\"https://www.netflix.com/in/browse/genre/1191605\",\"uniqueKey\":\"https://www.netflix.com/in/browse/genre/1191605\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2024-05-30T07:45:48.115Z\"}",
 	"method": "GET",
 	"orderNo": null,
 	"retryCount": 0,
