@@ -1,39 +1,38 @@
-import { log, Dataset, CheerioCrawler } from "crawlee";
+
+import { CheerioCrawler, log, Dataset } from 'crawlee';
 
 const crawler = new CheerioCrawler({
-  requestHandler: async ({ request, parseWithCheerio }) => {
+  requestHandler: async ({ request, parseWithCheerio, pushData }) => {
     log.info(`Processing: ${request.url}`);
-    console.log(request.label);
 
     // Use parseWithCheerio for efficient HTML parsing
     const $ = await parseWithCheerio();
 
     // Extract genre titles
-    const titles = $(".nm-collections-row-name")
+    const titles = $('.nm-collections-row-name')
       .map((_, el) => $(el).text().trim())
       .get();
 
     // Extract show titles
-    const shows = $(".nm-collections-title-name")
+    const shows = $('.nm-collections-title-name')
       .map((_, el) => $(el).text().trim())
       .get();
 
     // Prepare data for pushing
     const allShows = [];
-    let chunk = [];
+    let genreShows = [];
     shows.forEach((show) => {
-      chunk.push(show);
-      if (chunk.length === 40) {
-        allShows.push(chunk);
-        chunk = [];
+      genreShows.push(show);
+      if (genreShows.length === 40) {
+        allShows.push(genreShows);
+        genreShows = [];
       }
     });
-    if (chunk.length > 0) {
-      allShows.push(chunk);
+    if (genreShows.length > 0) {
+      allShows.push(genreShows);
     }
 
-    // await Dataset.pushData({ titles, allShows });
-    await Dataset.pushData({
+    await pushData({
       genre: titles,
       shows: allShows,
     });
@@ -43,5 +42,5 @@ const crawler = new CheerioCrawler({
   maxRequestsPerCrawl: 20,
 });
 
-await crawler.run(["https://www.netflix.com/in/browse/genre/1191605"]);
-await Dataset.exportToJSON("results");
+await crawler.run(['https://www.netflix.com/in/browse/genre/1191605']);
+await Dataset.exportToJSON('results');
