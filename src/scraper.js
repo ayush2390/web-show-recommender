@@ -33,7 +33,7 @@ const crawler = new CheerioCrawler({
   },
 
   // Limit crawls for efficiency
-  maxRequestsPerCrawl: 20,
+  // maxRequestsPerCrawl: 20,
 });
 
 await crawler.run(["https://www.netflix.com/in/browse/genre/1191605"]);
