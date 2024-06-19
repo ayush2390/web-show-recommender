@@ -1,41 +1,34 @@
-import { log, Dataset, CheerioCrawler } from "crawlee";
+import { CheerioCrawler, log, Dataset } from "crawlee";
 
 const crawler = new CheerioCrawler({
-  requestHandler: async ({ request, parseWithCheerio }) => {
+  requestHandler: async ({ request, parseWithCheerio, pushData }) => {
     log.info(`Processing: ${request.url}`);
-    console.log(request.label);
 
     // Use parseWithCheerio for efficient HTML parsing
     const $ = await parseWithCheerio();
 
-    // Extract genre titles
-    const titles = $(".nm-collections-row-name")
-      .map((_, el) => $(el).text().trim())
-      .get();
-
-    // Extract show titles
-    const shows = $(".nm-collections-title-name")
-      .map((_, el) => $(el).text().trim())
+    // Extract genre and shows directly from the HTML structure
+    const data = $('[data-uia="collections-row"]')
+      .map((_, el) => {
+        const genre = $(el)
+          .find('[data-uia="collections-row-title"]')
+          .text()
+          .trim();
+        const items = $(el)
+          .find('[data-uia="collections-title"]')
+          .map((_, itemEl) => $(itemEl).text().trim())
+          .get();
+        return { genre, items };
+      })
       .get();
 
     // Prepare data for pushing
-    const allShows = [];
-    let chunk = [];
-    shows.forEach((show) => {
-      chunk.push(show);
-      if (chunk.length === 40) {
-        allShows.push(chunk);
-        chunk = [];
-      }
-    });
-    if (chunk.length > 0) {
-      allShows.push(chunk);
-    }
+    const genres = data.map((d) => d.genre);
+    const shows = data.map((d) => d.items);
 
-    // await Dataset.pushData({ titles, allShows });
-    await Dataset.pushData({
-      genre: titles,
-      shows: allShows,
+    await pushData({
+      genre: genres,
+      shows: shows,
     });
   },
 

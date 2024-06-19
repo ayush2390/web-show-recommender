@@ -3,7 +3,7 @@
   "retiredSessionsCount": 0,
   "sessions": [
     {
-      "id": "session_0FK92KypIA",
+      "id": "session_SNvpn41a1H",
       "cookieJar": {
         "version": "tough-cookie@4.1.4",
         "storeType": "MemoryCookieStore",
@@ -14,48 +14,48 @@
         "cookies": [
           {
             "key": "flwssn",
-            "value": "d8d88f17-7009-43a9-a6f7-17252074e20b",
+            "value": "06942c45-cf91-4420-8dbd-1601c3f76f6e",
             "maxAge": 10800,
             "domain": "netflix.com",
             "path": "/",
             "hostOnly": false,
-            "creation": "2024-05-30T07:45:48.071Z",
-            "lastAccessed": "2024-05-30T07:45:48.071Z"
+            "creation": "2024-06-19T06:02:42.499Z",
+            "lastAccessed": "2024-06-19T06:02:42.499Z"
           },
           {
             "key": "nfvdid",
-            "value": "BQFmAAEBEKnkEz92FMk-3aZOB2dcm01AxsVzqcdQBss2ISMd8fMYyaBXNquireO5-48GhVK1JnQLXs2qUnqseRqOcFe_xVo4yLHxBLuRUgHxR8-2k34EHA%3D%3D",
+            "value": "BQFmAAEBEJ0EFG82SBtgIm7nziAGPWJAzQmzWjG595FKiQLeM0bEeaL_6e7Q_7kYmZDIFBoNtx8V2a9zzwFZPHtkuqJHiEQqqHU3x6uxiJzrQKRfjG9VUg%3D%3D",
             "maxAge": 31536000,
             "domain": "netflix.com",
             "path": "/",
             "hostOnly": false,
-            "creation": "2024-05-30T07:45:48.080Z",
-            "lastAccessed": "2024-05-30T07:45:48.080Z"
+            "creation": "2024-06-19T06:02:42.505Z",
+            "lastAccessed": "2024-06-19T06:02:42.505Z"
           },
           {
             "key": "SecureNetflixId",
-            "value": "v%3D2%26mac%3DAQEAEQABABRVAXMdmARa532dObyHr7QKLIOjZLznsJ8.%26dt%3D1717055146533",
-            "expires": "2025-05-30T07:45:46.000Z",
+            "value": "v%3D2%26mac%3DAQEAEQABABROOxJVLZwMFp0vbd2vRijCxbqiWnwWMAE.%26dt%3D1718776960180",
+            "expires": "2025-06-19T06:02:40.000Z",
             "domain": "netflix.com",
             "path": "/",
             "secure": true,
             "httpOnly": true,
             "hostOnly": false,
-            "creation": "2024-05-30T07:45:48.084Z",
-            "lastAccessed": "2024-05-30T07:45:48.084Z",
+            "creation": "2024-06-19T06:02:42.508Z",
+            "lastAccessed": "2024-06-19T06:02:42.508Z",
             "sameSite": "strict"
           },
           {
             "key": "NetflixId",
-            "value": "v%3D2%26ct%3DBQAOAAEBEKqmWEQiQVENSadnevDvtCGBABL4HoKF_KDAYSEqVhsK6YYBlfL3Bo6Fdrdv2KvZ7Ngctkw8F0lt7Lre_5vyxw-4Xei0HRce-c5K5QTa5902a98zPKruROWTWqEbR9ArEUPygIUp3pn6nN-yqjjF33KZFZeg7n-AFvW3nr5vJ_pMG92FXPmAnIww8MnXDohmkZAm5OYnSJnTKRN51w3or6pzolI7la1FL8DIoIXkEPkqCEAd5CqSqYWPwNip4Af6CrwsUxQh_gFSQglpoHafQa7T8FxSLEAjne_XsWfHyNhL1SfbvOlRkqnUuAJEsgpCXjf74briemBChPwDZTWq4GSzAMQsPRh15R4_hBA7RY1S3Ds.%26bt%3Ddev%26mac%3DAQEAEAABABTCIHSfhTihu_WpbAYOzkI4qDCiSQYVQMs.",
-            "expires": "2025-05-30T07:45:46.000Z",
+            "value": "v%3D2%26ct%3DBQAOAAEBEK4G93Ysu6Z6dZE7Jo5cU8SBACwm-uQOBpE0ICaPoRE9u_phub5ldh5GcRY6gqDJVn7zQwcqs5km4EjPVnrPChu6hay4MSempVlcL9vTk0A9YXhwPGAT86mmq9JjyW_sdxMjRyjrRyUiOy7rDMae71OD7aa3_SPY6MNUHmjmGuX4VqdeoOxXQZOLUWDLIz6hHYk2jyOD2RIgCfWXq6qMxfCM0KdpUh0w7OvmVGFecP_cPgcdTo7Uj8G9HaHHXG0DKgiMkyk-l6w-_7fFjUHIASpLw4lJrBTktAFKFSoIbhHmTKytiDohfAvwdJuakk6AqI7EpGVkK0Z1c7IH48BMeFYl41SRqoUdHOyczJMGbxKTduM.%26bt%3Ddev%26mac%3DAQEAEAABABSaHX02sxeegd6QH-Uk5y3ba4lOJv6SQNM.",
+            "expires": "2025-06-19T06:02:40.000Z",
             "domain": "netflix.com",
             "path": "/",
             "secure": true,
             "httpOnly": true,
             "hostOnly": false,
-            "creation": "2024-05-30T07:45:48.085Z",
-            "lastAccessed": "2024-05-30T07:45:48.085Z",
+            "creation": "2024-06-19T06:02:42.510Z",
+            "lastAccessed": "2024-06-19T06:02:42.510Z",
             "sameSite": "lax"
           }
         ]
@@ -63,8 +63,8 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2024-05-30T08:35:43.647Z",
-      "createdAt": "2024-05-30T07:45:43.647Z",
+      "expiresAt": "2024-06-19T06:52:37.587Z",
+      "createdAt": "2024-06-19T06:02:37.587Z",
       "usageCount": 1,
       "maxUsageCount": 50,
       "errorScore": 0
